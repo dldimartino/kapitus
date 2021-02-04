@@ -1,0 +1,28 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(0, 0, 255));
+    margin-bottom: 100px;
+}
+
+.kapitus-logo {
+    font-size: 2em;
+}
+
+.navbar .nav-menu {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    color: white
+}
+
+.nav-item {
+    margin: 0px 20px 0px 20px;
+}
+
+.nav-item:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}

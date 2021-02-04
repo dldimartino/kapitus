@@ -3,13 +3,13 @@ import React from 'react'
 const Navbar = () => {
 
     return (
-        <div id="navbar">
-            <h2>Kapitus</h2>
+        <div className="navbar">
+            <h2 className="kapitus-logo">Kapitus</h2>
             <div className='nav-menu'>
-                <h5>Home</h5>
-                <h5>Search</h5>
-                <h5>About</h5>
-                <h5>Contact Us</h5>
+                <h5 className="nav-item">Home</h5>
+                <h5 className="nav-item">Search</h5>
+                <h5 className="nav-item">About</h5>
+                <h5 className="nav-item">Contact Us</h5>
             </div>
         </div>
     )
