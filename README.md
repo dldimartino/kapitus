@@ -1,29 +1,5 @@
 This is the Kapitus coding challenge
 
-Created git commit.
-
-Success! Created kapitus at /Users/dimar/Coding/kapitus
-Inside that directory, you can run several commands:
-
-  npm start
-    Starts the development server.
-
-  npm run build
-    Bundles the app into static files for production.
-
-  npm test
-    Starts the test runner.
-
-  npm run eject
-    Removes this tool and copies build dependencies, configuration files
-    and scripts into the app directory. If you do this, you can’t go back!
-
-We suggest that you begin by typing:
-
-  cd kapitus
-  npm start
-
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -65,32 +41,30 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
 ### Code Splitting
-
 This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
 ### Deployment
-
 This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
 ### `npm run build` fails to minify
-
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+The at-home coding exercise is simply this: read data from a publicly available REST api,  and display the results on a web page.
+
+ 
+
+You can use any JavaScript framework you feel comfortable with (not typescript).
+The Rest API I picked is documented here (this is just one I found online (I’m told it may now require registering to use): https://financialmodelingprep.com/developer/docs/companies-key-stats-free-api
+The particular endpoint will be the “Company Profile” one.
+
+The requirements but can expand:
+User provides stock symbol of any company, retrieves and views company’s profile information
+
+- Given that the company data for “changes” or “changesPercentage” are positive, when displayed the field should be green
+
+- Given that the company data for “changes” or “changesPercentage” are negative, when displayed the field should be red
+
+- Given that the price field has data, it should be displayed with the $ sign
+
+- Given that the “website” field has a link, when I click on it, it should take me to the website
