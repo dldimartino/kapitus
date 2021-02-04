@@ -1,0 +1,10 @@
+#navbar {
+    display: flex;
+    background-color: red;
+    justify-content: space-between;
+}
+
+.navbar .nav-menu {
+    display: flex;
+    justify-content: space-between;
+}
