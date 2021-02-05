@@ -6,7 +6,7 @@ const SearchForm = (props) => {
     const [stock, setStock] = useState({})
     const [searchBar, setSearchBar] = useState("")
 
-    const getrata = async (symbol="AAPL") => {
+    const getData = async (symbol="AAPL") => {
         const info = await axios.get(`https://financialmodelingprep.com/api/v3/company/profile/${symbol}?apikey=4540193e127ee8af1bfdbffae6a58da3`)
         setStock(info.data)
     }
@@ -16,7 +16,7 @@ const SearchForm = (props) => {
     }
 
     useEffect(() => {
-        getrata()
+        getData()
     }, [])
 
 
@@ -25,7 +25,7 @@ const SearchForm = (props) => {
     return (
     <div className="search-form-component">
 
-        <form name="searchForm" onSubmit={() => getrata(searchBar)} id="input-section">
+        <form name="searchForm" onSubmit={() => getData(searchBar)} id="input-section">
             <label htmlFor="searchForm"> Enter Symbol 
             <input type="text" id="searchForm" name="searchForm" onChange={searchUpdater}/>
             </label>
@@ -127,7 +127,7 @@ const SearchForm = (props) => {
                 </div>
                 <div className="line-item">
                     <div>LAST DIV:</div>
-                    <div>{stock.profile.lastriv}</div>
+                    <div>{stock.profile.lastDiv}</div>
                 </div>
                 <div className="line-item">
                     <div>MKT CAP:</div>
@@ -213,62 +213,109 @@ const SearchForm = (props) => {
             </div>
 
             <div className="sub-info">
-                <table id="left-bar">
-                    <td className="column-1">
-                        <tr>CUSIP:</tr>
-                        <tr>BETA:</tr>
-                        <tr>ADDRESS:</tr>
-                        <tr>CITY:</tr>
-                        <tr>COUNTRY:</tr>
-                        <tr>CURRENCY:</tr>
-                        <tr>CEO:</tr>
-                        <tr>CIK:</tr>
-                        <tr>EXCHANGE:</tr>
-                        <tr>EXCHANGE SHORT NAME:</tr>
-                        <tr>FULL TIME EMPLOYEES:</tr>
-                        <tr>IMAGE:</tr>
-                        <tr>INDUSTRY:</tr>
-                        <tr>IPO DATE:</tr>
-                        <tr>ISIN:</tr>
-                        <tr>LAST DIV:</tr>
-                        <tr>MKT CAP:</tr>
-                        <tr>PHONE:</tr>
-                        <tr>PRICE:</tr>
-                        <tr>RANGE:</tr>
-                        <tr>SECTOR:</tr>
-                        <tr>STATE:</tr>
-                        <tr>VOL AVG:</tr>
-                        <tr>WEBSITE:</tr>
-                        <tr>ZIP:</tr>
-                    </td>
-                    <td className="column-2">
-                        <tr>0</tr>
-                        <tr>0</tr>
-                        <tr>0</tr>
-                        <tr>0</tr>
-                        <tr>0</tr>
-                        <tr>0</tr>
-                        <tr>0</tr>
-                        <tr>0</tr>
-                        <tr>0</tr>
-                        <tr>0</tr>
-                        <tr>0</tr>
-                        <tr>0</tr>
-                        <tr>0</tr>
-                        <tr>0</tr>
-                        <tr>0</tr>
-                        <tr>0</tr>
-                        <tr>0</tr>
-                        <tr>0</tr>
-                        <tr>0</tr>
-                        <tr>0</tr>
-                        <tr>0</tr>
-                        <tr>0</tr>
-                        <tr>0</tr>
-                        <tr>No Website Listed</tr>
-                        <tr>0</tr>
-                    </td>
-                </table>
+                
+                <div className="left-bar">
+                    <div className="line-item">
+                        <div>CUSIP:</div>
+                        <div>0</div>
+                    </div>
+                    <div className="line-item">
+                        <div>BETA:</div>
+                        <div>0</div>
+                    </div>
+                    <div className="line-item">
+                        <div>ADDRESS:</div>
+                        <div>0</div>
+                    </div>
+                    <div className="line-item">
+                        <div>CITY:</div>
+                        <div>0</div>
+                    </div>
+                    <div className="line-item">
+                        <div>COUNTRY:</div>
+                        <div>0</div>
+                    </div>
+                    <div className="line-item">
+                        <div>CURRENCY:</div>
+                        <div>0</div>
+                    </div>
+                    <div className="line-item">
+                        <div>CEO:</div>
+                        <div>0</div>
+                    </div>
+                    <div className="line-item">
+                        <div>CIK:</div>
+                        <div>0</div>
+                    </div>
+                    <div className="line-item">
+                        <div>EXCHANGE:</div>
+                        <div>0</div>
+                    </div>
+                    <div className="line-item">
+                        <div>EXCHANGE SHORT NAME:</div>
+                        <div>0</div>
+                    </div>
+                    <div className="line-item">
+                        <div>FULL TIME EMPLOYEES:</div>
+                        <div>0</div>
+                    </div>
+                    <div className="line-item">
+                        <div>IMAGE:</div>
+                        <div>0</div>
+                    </div>
+                    <div className="line-item">
+                        <div>INDUSTRY:</div>
+                        <div>0</div>
+                    </div>
+                    <div className="line-item">
+                        <div>IPO DATE:</div>
+                        <div>0</div>
+                    </div>
+                    <div className="line-item">
+                        <div>ISIN:</div>
+                        <div>0</div>
+                    </div>
+                    <div className="line-item">
+                        <div>LAST DIV:</div>
+                        <div>0</div>
+                    </div>
+                    <div className="line-item">
+                        <div>MKT CAP:</div>
+                        <div>0</div>
+                    </div>
+                    <div className="line-item">
+                        <div>PHONE:</div>
+                        <div>0</div>
+                    </div>
+                    <div className="line-item">
+                        <div>PRICE:</div>
+                        <div>0</div>
+                    </div>
+                    <div className="line-item">
+                        <div>RANGE:</div>
+                        <div>0</div>
+                    </div>
+                    <div className="line-item">
+                        <div>SECTOR:</div>
+                        <div>0</div>
+                    </div>
+                    <div className="line-item">
+                        <div>STATE:</div>
+                        <div>0</div>
+                    </div>
+                    <div className="line-item">
+                        <div>VOL AVG:</div>
+                        <div>0</div>
+                    </div>
+                    <div className="line-item">
+                        <div>WEBSITE:</div>
+                        <div>No Website Listed</div>
+                    </div>
+                    <div className="line-item">
+                        <div>ZIP:</div>
+                        <div>0</div>
+                    </div>
+                </div>
 
             <div className="right-bar">
                 <div className="line-item">
