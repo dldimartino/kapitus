@@ -2,7 +2,7 @@ import React from 'react'
 
 const SubInfo = (props) => {
     
-    const stock = props.stockInfo
+    const stock = props.stockInfo.profile
     
     return (
         <div className="sub-info-component">
@@ -51,10 +51,6 @@ const SubInfo = (props) => {
                     <div className="line-item">
                         <div>FULL TIME EMPLOYEES:</div>
                         <div>{stock.fullTimeEmployees}</div>
-                    </div>
-                    <div className="line-item">
-                        <div>IMAGE:</div>
-                        <div>{stock.image}</div>
                     </div>
                     <div className="line-item">
                         <div>INDUSTRY:</div>

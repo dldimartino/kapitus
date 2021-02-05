@@ -1,59 +1,25 @@
-This is the Kapitus coding challenge
+This is the Kapitus coding challenge.
 
-# Getting Started with Create React App
+This project was created using the create-react-app starting point (my first time trying this functionality)
+I found that it was a quick and easy starting point for a react application. I've also read that Next.js is a good starting point
+and plan to build my next project using Next.js as a learning experience.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This application is under construction (mosly CSS/design) but has been made available in it's current form due to time constraints and to allow viewers
+to keep track of updates as they come.
 
-## Available Scripts
+The current setup attempts a get request to the 3rd party api, but as this is a free version of the api, there is a limited number of daily requests allowed.
+If the number of daily requests has been reached, the app will default to the demo/test request which sends back AAPL information.
 
-In the project directory, you can run:
+The search form has been split up into different components and each is passed the required data as props. I did this to show how applications can be broken down
+into smaller pieces/components and also to make it easier for a code reviewer to read.
 
-### `npm start`
+There will be updates to follow, but I hope you enjoy the current status of the application.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Dan DiMartino
+dandimartino@gmail.com
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-### Code Splitting
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Deployment
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-The at-home coding exercise is simply this: read data from a publicly available REST api,  and display the results on a web page.
-
- 
-
+Challenge Description:
 You can use any JavaScript framework you feel comfortable with (not typescript).
 The Rest API I picked is documented here (this is just one I found online (I’m told it may now require registering to use): https://financialmodelingprep.com/developer/docs/companies-key-stats-free-api
 The particular endpoint will be the “Company Profile” one.

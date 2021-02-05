@@ -8,13 +8,18 @@ const SideBar = (props) => {
     return (
         <div className="sidebar-component">
                 <div className="line-item">
-                    <div>DEFAULT IMAGE:</div>
                     <div>{stock.defaultImage}</div>
                 </div>
                 <div className="line-item">
+                        <img src={stock.image}/>
+                    </div>
+                <div className="line-item">
+                <div className="description">
                     <div>DESCRIPTION:</div>
                     <div>{stock.description}</div>
+                    </div>
                 </div>
+
             </div>
     )
 }

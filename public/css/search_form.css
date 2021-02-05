@@ -108,6 +108,7 @@
 
 .company-info{
     display: flex;
+    justify-content: center;
 }
 
 
@@ -118,4 +119,37 @@
 .just-list-component {
     text-align: center;
     width: 500px;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar-component {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+}
+
+.just-list-component {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 800px;
+}
+.map-item {
+    display: flex;
+    justify-content: space-between;
+}
+#map-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    border: 2px solid black;
+    padding: 20px;
 }
