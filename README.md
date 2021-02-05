@@ -4,14 +4,12 @@ This project was created using the create-react-app starting point (my first tim
 I found that it was a quick and easy starting point for a react application. I've also read that Next.js is a good starting point
 and plan to build my next project using Next.js as a learning experience.
 
-This application is under construction (mosly CSS/design) but has been made available in it's current form due to time constraints and to allow viewers
-to keep track of updates as they come.
+This application is under construction (mosly CSS/design) but has been made available in it's current form due to time constraints and so viewers can keep track of updates as they come.
 
-The current setup attempts a get request to the 3rd party api, but as this is a free version of the api, there is a limited number of daily requests allowed.
-If the number of daily requests has been reached, the app will default to the demo/test request which sends back AAPL information.
+The current setup attempts a GET request to a 3rd party API for stock/company information. As this is a free version of the API, there is a limited number of daily requests allowed.
+If the number of daily requests have been reached, the app will default to the demo/test GET request which sends back AAPL information.
 
-The search form has been split up into different components and each is passed the required data as props. I did this to show how applications can be broken down
-into smaller pieces/components and also to make it easier for a code reviewer to read.
+The search form has been split up into different components and each is passed the required data as props. I did this to show how applications can be broken down into smaller pieces/components and also to make it easier for a code reviewer to read the JSX.
 
 There will be updates to follow, but I hope you enjoy the current status of the application.
 
