@@ -42,7 +42,7 @@
     border-radius: 5px;
     padding: 10px 40px 10px 40px;
     margin: 20px;
-    background-color: rgb(0, 22, 111);
+    background-color: rgb(0, 23, 113);
 }
 
 .main-info-item {
@@ -80,18 +80,19 @@
     display: flex;
     justify-content: center;
 }
-.left-bar {
+.right-bar {
     display: flex;
     flex-direction: column;
-    background-color: green;
+    background-color: rgb(254, 251, 242);
     margin: 25px;
     border: 1px solid black;
+    border-radius: 5px;;
 }
 
 .sidebar-component {
-    background-color: yellow;
-    margin: 25px;
+    margin: 15px;
     border: 1px solid black;
+    border-radius: 5px;
 }
 
 .line-item {
@@ -140,6 +141,7 @@
     flex-direction: column;
     align-self: center;
     width: 800px;
+    margin: 80px 0px 0px 0px;
 }
 .map-item {
     display: flex;

@@ -8,7 +8,7 @@ const JustList = (props) => {
     return (
         <div className="just-list-component">
 
-            <div>This component will fire a get request and map through the results only showing values that HAVE data</div>
+            <div>This component will map through the results of the GET request, only showing values that HAVE data</div>
             <br/>
             <div> (just an example to show JSX map functionality)</div>
 

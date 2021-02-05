@@ -14,7 +14,7 @@ const SideBar = (props) => {
                 </div>
 
                 <div className="line-item">
-                        <img src={stock.image}/>
+                        <img src={stock.image} alt="Company Logo"/>
                     </div>
 
                 <div className="line-item">

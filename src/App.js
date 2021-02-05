@@ -1,7 +1,6 @@
 import React from 'react'
 import { Navbar, Home, Footer } from './components'
-// import Routes from './routes'
-//(if I end up using React Router)
+//(if/when I end up using React Router)
 
 function App() {
   return (

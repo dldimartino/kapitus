@@ -26,8 +26,8 @@ const MainInfo = (props) => {
                 <div className="change-item">
                     <div>CHANGE:</div>
                     {stock.changes > 0 ?
-                    <div className="green">{`+ $${stock.changes}`}</div>
-                    : <div className="red">{stock.changes}</div>
+                    <div className="green">{`+ $ ${stock.changes}`}</div>
+                    : <div className="red">{`$ ${stock.changes}`}</div>
                     }
                 </div>
 

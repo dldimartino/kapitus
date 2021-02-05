@@ -8,7 +8,7 @@ const SubInfo = (props) => {
         <div className="sub-info-component">
 
             <div className="sub-info">
-                <div className="left-bar">
+                <div className="right-bar">
 
                     <div className="line-item">
                         <div>CUSIP:</div>

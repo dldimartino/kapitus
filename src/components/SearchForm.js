@@ -5,25 +5,20 @@ import {MainInfo, JustList, SideBar, SubInfo} from './'
 
 const SearchForm = () => {
     const [stock, setStock] = useState({})
-    const [searchBar, setSearchBar] = useState("AAPL")
+    const [searchBar, setSearchBar] = useState("NOK")
 
     const handleSubmit = async (event=null) => {
         if (event !== null) {event.preventDefault()}
-        console.log("SEARCHBAR", searchBar)
         let info = await axios.get(`https://financialmodelingprep.com/api/v3/company/profile/${searchBar}?apikey=4540193e127ee8af1bfdbffae6a58da3`)
-        // if (!info.data.profile) {
-        //     console.log("INFO BEFORE", info)
-        //     info = await axios.get(`https://financialmodelingprep.com/api/v3/company/profile/AAPL?apikey=demo`)
-        //     console.log("INFO AFTER", info)
-        // }
-        // info.data.symbol = "Request limit reached: showing DEFAULT symbol: AAPL"
+        if (!info.data.profile) {
+            info = await axios.get(`https://financialmodelingprep.com/api/v3/company/profile/AAPL?apikey=demo`)
+            info.data.symbol = "Daily free API request limit reached: showing Default/Test symbol: AAPL"
+        }
         setStock(info.data)
     }
 
     const handleChange = (event) => {
-        console.log("SEARCHBEFORE", searchBar)
         setSearchBar(event.target.value)
-        console.log("SEARCHAFTER", searchBar)
     }
 
     useEffect(() => {
