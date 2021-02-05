@@ -24,13 +24,17 @@ const SearchForm = (props) => {
     
     return (
     <div className="search-form-component">
+
         <form name="searchForm" onSubmit={() => getData(searchBar)} id="input-section">
-            <label for="searchForm"> Enter Symbol </label>
+            <label htmlFor="searchForm"> Enter Symbol 
             <input type="text" id="searchForm" name="searchForm" onChange={searchUpdater}/>
-            <input type="submit" name="searchForm"> Submit </input>
+            </label>
+            <button type="submit" name="searchForm"> Submit </button>
         </form>
+
         {stock.symbol ?
         <div className="stock-info">
+            
             <div className="main-info">
                 <div className="main-info-item">
                     <div className="company-name">{stock.profile.companyName}</div>
@@ -42,161 +46,140 @@ const SearchForm = (props) => {
                     <div>PRICE:</div>
                     {stock.profile.price ? <div>{`$ ${stock.profile.price}`}</div> : <div>Price Unavailable</div>}
                 </div>
-            <div className="change-section">
-            <div className="change-item">
-                <div>CHANGE:</div>
-                {stock.profile.changes > 0 ?
-                <div className="green">{`+ $${stock.profile.changes}`}</div>
-            :   <div className="red">{stock.profile.changes}</div>
-                }
+                <div className="change-section">
+                    <div className="change-item">
+                        <div>CHANGE:</div>
+                        {stock.profile.changes > 0 ?
+                        <div className="green">{`+ $${stock.profile.changes}`}</div>
+                        : <div className="red">{stock.profile.changes}</div>
+                        }
+                    </div>
+                    <div className="change-item">
+                        <div>CHANGE PERCENTAGE:</div>
+                        {stock.profile.changes > 0 ?
+                        <div className="green">{stock.profile.changesPercentage}</div>
+                        : <div className="red">{stock.profile.changesPercentage}</div>
+                        }
+                    </div>
                 </div>
-
-            <div className="change-item">
-                <div>CHANGE PERCENTAGE:</div>
-                {stock.profile.changes > 0 ?
-                <div className="green">{stock.profile.changesPercentage}</div>
-            :   <div className="red">{stock.profile.changesPercentage}</div>
-                }
-            </div>
-            </div>
-            </div>
-            <div className="line-item">
-                <div>ADDRESS:</div>
-                <div>{stock.profile.address}</div>
             </div>
 
-            <div className="line-item">
-                <div>BETA:</div>
-                <div>{stock.profile.beta}</div>
+            <div className="sub-info">
+                <div className="line-item">
+                    <div>CUSIP:</div>
+                    <div>{stock.profile.cusip}</div>
+                </div>
+                <div className="line-item">
+                    <div>BETA:</div>
+                    <div>{stock.profile.beta}</div>
+                </div>
+                <div className="line-item">
+                    <div>ADDRESS:</div>
+                    <div>{stock.profile.address}</div>
+                </div>
+                <div className="line-item">
+                    <div>CITY:</div>
+                    <div>{stock.profile.city}</div>
+                </div>
+                <div className="line-item">
+                    <div>COUNTRY:</div>
+                    <div>{stock.profile.country}</div>
+                </div>
+                <div className="line-item">
+                    <div>CURRENCY:</div>
+                    <div>{stock.profile.currency}</div>
+                </div>
+                <div className="line-item">
+                    <div>CEO:</div>
+                    <div>{stock.profile.ceo}</div>
+                </div>
+                <div className="line-item">
+                    <div>CIK:</div>
+                    <div>{stock.profile.cik}</div>
+                </div>
+                <div className="line-item">
+                    <div>EXCHANGE:</div>
+                    <div>{stock.profile.exchange}</div>
+                </div>
+                <div className="line-item">
+                    <div>EXCHANGE SHORT NAME:</div>
+                    <div>{stock.profile.exchangeShortName}</div>
+                </div>
+                <div className="line-item">
+                    <div>FULL TIME EMPLOYEES:</div>
+                    <div>{stock.profile.fullTimeEmployees}</div>
+                </div>
+                <div className="line-item">
+                    <div>IMAGE:</div>
+                    <div>{stock.profile.image}</div>
+                </div>
+                <div className="line-item">
+                    <div>INDUSTRY:</div>
+                    <div>{stock.profile.industry}</div>
+                </div>
+                <div className="line-item">
+                    <div>IPO DATE:</div>
+                    <div>{stock.profile.ipoDate}</div>
+                </div>
+                <div className="line-item">
+                    <div>ISIN:</div>
+                    <div>{stock.profile.isin}</div>
+                </div>
+                <div className="line-item">
+                    <div>LAST DIV:</div>
+                    <div>{stock.profile.lastDiv}</div>
+                </div>
+                <div className="line-item">
+                    <div>MKT CAP:</div>
+                    <div>{stock.profile.mktCap}</div>
+                </div>
+                <div className="line-item">
+                    <div>PHONE:</div>
+                    <div>{stock.profile.phone}</div>
+                </div>
+                <div className="line-item">
+                    <div>PRICE:</div>
+                    <div>{stock.profile.price}</div>
+                </div>
+                <div className="line-item">
+                    <div>RANGE:</div>
+                    <div>{stock.profile.range}</div>
+                </div>
+                <div className="line-item">
+                    <div>SECTOR:</div>
+                    <div>{stock.profile.sector}</div>
+                </div>
+                <div className="line-item">
+                    <div>STATE:</div>
+                    <div>{stock.profile.state}</div>
+                </div>
+                <div className="line-item">
+                    <div>VOL AVG:</div>
+                    <div>{stock.profile.volAvg}</div>
+                </div>
+                <div className="line-item">
+                    <div>WEBSITE:</div>
+                    {stock.profile.website ? <a href={stock.profile.website}> {stock.profile.website} </a> : <div>No Website Listed</div>}
+                </div>
+                <div className="line-item">
+                    <div>ZIP:</div>
+                    <div>{stock.profile.zip}</div>
+                </div>
             </div>
 
-            <div className="line-item">
-                <div>CEO:</div>
-                <div>{stock.profile.ceo}</div>
+            <div className="sidebar">
+                <div className="line-item">
+                    <div>DEFAULT IMAGE:</div>
+                    <div>{stock.profile.defaultImage}</div>
+                </div>
+                <div className="line-item">
+                    <div>DESCRIPTION:</div>
+                    <div>{stock.profile.description}</div>
+                </div>
             </div>
-
-
-            <div className="line-item">
-                <div>CIK:</div>
-                <div>{stock.profile.cik}</div>
-            </div>
-
-            <div className="line-item">
-                <div>CITY:</div>
-                <div>{stock.profile.city}</div>
-            </div>
-
-            <div className="line-item">
-                <div>COUNTRY:</div>
-                <div>{stock.profile.country}</div>
-            </div>
-
-            <div className="line-item">
-                <div>CURRENCY:</div>
-                <div>{stock.profile.currency}</div>
-            </div>
-
-            <div className="line-item">
-                <div>CUSIP:</div>
-                <div>{stock.profile.cusip}</div>
-            </div>
-
-            <div className="line-item">
-                <div>DEFAULT IMAGE:</div>
-                <div>{stock.profile.defaultImage}</div>
-            </div>
-
-            <div className="line-item">
-                <div>DESCRIPTION:</div>
-                <div>{stock.profile.description}</div>
-            </div>
-
-            <div className="line-item">
-                <div>EXCHANGE:</div>
-                <div>{stock.profile.exchange}</div>
-            </div>
-
-            <div className="line-item">
-                <div>EXCHANGE SHORT NAME:</div>
-                <div>{stock.profile.exchangeShortName}</div>
-            </div>
-
-            <div className="line-item">
-                <div>FULL TIME EMPLOYEES:</div>
-                <div>{stock.profile.fullTimeEmployees}</div>
-            </div>
-
-            <div className="line-item">
-                <div>IMAGE:</div>
-                <div>{stock.profile.image}</div>
-            </div>
-
-            <div className="line-item">
-                <div>INDUSTRY:</div>
-                <div>{stock.profile.industry}</div>
-            </div>
-
-            <div className="line-item">
-                <div>IPO DATE:</div>
-                <div>{stock.profile.ipoDate}</div>
-            </div>
-
-            <div className="line-item">
-                <div>ISIN:</div>
-                <div>{stock.profile.isin}</div>
-            </div>
-
-            <div className="line-item">
-                <div>LAST DIV:</div>
-                <div>{stock.profile.lastDiv}</div>
-            </div>
-
-            <div className="line-item">
-                <div>MKT CAP:</div>
-                <div>{stock.profile.mktCap}</div>
-            </div>
-
-            <div className="line-item">
-                <div>PHONE:</div>
-                <div>{stock.profile.phone}</div>
-            </div>
-
-            <div className="line-item">
-                <div>PRICE:</div>
-                <div>{stock.profile.price}</div>
-            </div>
-
-            <div className="line-item">
-                <div>RANGE:</div>
-                <div>{stock.profile.range}</div>
-            </div>
-
-            <div className="line-item">
-                <div>SECTOR:</div>
-                <div>{stock.profile.sector}</div>
-            </div>
-
-            <div className="line-item">
-                <div>STATE:</div>
-                <div>{stock.profile.state}</div>
-            </div>
-
-            <div className="line-item">
-                <div>VOL AVG:</div>
-                <div>{stock.profile.volAvg}</div>
-            </div>
-
-            <div className="line-item">
-                <div>WEBSITE:</div>
-                {stock.profile.website ? <a href={stock.profile.website}> {stock.profile.website} </a> : <div>No Website Listed</div>}
-            </div>
-
-            <div className="line-item">
-                <div>ZIP:</div>
-                <div>{stock.profile.zip}</div>
-            </div>
-        </div> : <div>Symbol Not Found</div>}
         </div>
+        : <div>Symbol Not Found</div>}
+    </div>
     )
 }
 
