@@ -17,7 +17,6 @@ const SearchForm = (props) => {
 
     useEffect(() => {
         getData()
-        // const interval = setInterval(getData(), 10000)
     }, [])
 
 
@@ -25,11 +24,11 @@ const SearchForm = (props) => {
     
     return (
     <div className="search-form-component">
-        <div type="submit" id="input-section">
-            <label name="formSubmit"> Enter Symbol </label>
-            <input type="text" name="formSubmit" onChange={searchUpdater}/>
-            <button type="submit" onClick={() => getData(searchBar)}> Submit </button>
-        </div>
+        <form name="searchForm" onSubmit={() => getData(searchBar)} id="input-section">
+            <label for="searchForm"> Enter Symbol </label>
+            <input type="text" id="searchForm" name="searchForm" onChange={searchUpdater}/>
+            <input type="submit" name="searchForm"> Submit </input>
+        </form>
         {stock.symbol ?
         <div className="stock-info">
             <div className="main-info">
@@ -61,14 +60,6 @@ const SearchForm = (props) => {
             </div>
             </div>
             </div>
-
-
-
-            <div className="line-item">
-                <div>SYMBOL:</div>
-                <div>{stock.symbol}</div>
-            </div>
-
             <div className="line-item">
                 <div>ADDRESS:</div>
                 <div>{stock.profile.address}</div>
