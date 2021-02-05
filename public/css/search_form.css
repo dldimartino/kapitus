@@ -1,6 +1,6 @@
 .search-form-component {
-    background-color: teal;
-    color: white;
+    background-color: white;
+    color: black;
 }
 
 .line-item {
@@ -13,6 +13,16 @@
     margin: 0px 20px 0px 20px;
     border-right: 1px solid black;
 }
+
+.line-item div:first-child {
+    background-color: yellow;
+    width: 200px;
+  }
+
+  .line-item div:nth-child(2) {
+    background-color: yellow;
+    width: 100%;
+  }
 
 #input-section {
     display: flex;
@@ -30,5 +40,56 @@
 }
 
 #input-section label {
+    margin: 20px;
+}
+
+.green {
+    color: green;
+    font-weight: 700;
+}
+
+.red {
+    color: red;
+    font-weight: 700;
+
+}
+
+.main-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    width: 500px;
+    background-color: red;
+}
+.main-info-item {
+    display: flex;
+}
+
+.company-name {
+    font-size: 40px;
+}
+
+.symbol {
+    font-size: 30px;
+}
+
+.stock-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+}
+
+.change-section {
+    display: flex;
+    justify-content: center;
+}
+
+.change-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 20px;
 }

@@ -17,6 +17,7 @@ const SearchForm = (props) => {
 
     useEffect(() => {
         getData()
+        // const interval = setInterval(getData(), 10000)
     }, [])
 
 
@@ -24,21 +25,48 @@ const SearchForm = (props) => {
     
     return (
     <div className="search-form-component">
-        <div id="input-section">
+        <div type="submit" id="input-section">
             <label name="formSubmit"> Enter Symbol </label>
             <input type="text" name="formSubmit" onChange={searchUpdater}/>
             <button type="submit" onClick={() => getData(searchBar)}> Submit </button>
         </div>
         {stock.symbol ?
-        <div>
+        <div className="stock-info">
+            <div className="main-info">
+                <div className="main-info-item">
+                    <div className="company-name">{stock.profile.companyName}</div>
+                </div>
+                <div className="main-info-item">
+                    <div className="symbol">{stock.symbol}</div>
+                </div>
+                <div className="main-info-item">
+                    <div>PRICE:</div>
+                    {stock.profile.price ? <div>{`$ ${stock.profile.price}`}</div> : <div>Price Unavailable</div>}
+                </div>
+            <div className="change-section">
+            <div className="change-item">
+                <div>CHANGE:</div>
+                {stock.profile.changes > 0 ?
+                <div className="green">{`+ $${stock.profile.changes}`}</div>
+            :   <div className="red">{stock.profile.changes}</div>
+                }
+                </div>
+
+            <div className="change-item">
+                <div>CHANGE PERCENTAGE:</div>
+                {stock.profile.changes > 0 ?
+                <div className="green">{stock.profile.changesPercentage}</div>
+            :   <div className="red">{stock.profile.changesPercentage}</div>
+                }
+            </div>
+            </div>
+            </div>
+
+
+
             <div className="line-item">
                 <div>SYMBOL:</div>
                 <div>{stock.symbol}</div>
-            </div>
-
-            <div className="line-item">
-                <div>PRICE:</div>
-                <div>{stock.profile.price}</div>
             </div>
 
             <div className="line-item">
@@ -56,15 +84,6 @@ const SearchForm = (props) => {
                 <div>{stock.profile.ceo}</div>
             </div>
 
-            <div className="line-item">
-                <div>CHANGES:</div>
-                <div>{stock.profile.changes}</div>
-            </div>
-
-            <div className="line-item">
-                <div>CHANGES PERCENTAGE:</div>
-                <div>{stock.profile.changesPercentage}</div>
-            </div>
 
             <div className="line-item">
                 <div>CIK:</div>
@@ -74,11 +93,6 @@ const SearchForm = (props) => {
             <div className="line-item">
                 <div>CITY:</div>
                 <div>{stock.profile.city}</div>
-            </div>
-
-            <div className="line-item">
-                <div>COMPANYNAME:</div>
-                <div>{stock.profile.companyName}</div>
             </div>
 
             <div className="line-item">
@@ -183,7 +197,7 @@ const SearchForm = (props) => {
 
             <div className="line-item">
                 <div>WEBSITE:</div>
-                <div>{stock.profile.website}</div>
+                {stock.profile.website ? <a href={stock.profile.website}> {stock.profile.website} </a> : <div>No Website Listed</div>}
             </div>
 
             <div className="line-item">
