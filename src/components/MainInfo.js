@@ -4,20 +4,25 @@ const MainInfo = (props) => {
 
     const stock = props.stockInfo.profile
     const symbol = props.stockInfo.symbol
-    console.log("STOCK>>>>>", stock)
+
     return (
         <div className="main-info-component">
+
             <div className="main-info-item">
                 <div className="company-name">{stock.companyName}</div>
             </div>
+            
             <div className="main-info-item">
                 <div className="symbol">{symbol}</div>
             </div>
+
             <div className="main-info-item">
                 <div>PRICE:</div>
                 {stock.price ? <div>{`$ ${stock.price}`}</div> : <div>Price Unavailable</div>}
             </div>
+
             <div className="change-section">
+
                 <div className="change-item">
                     <div>CHANGE:</div>
                     {stock.changes > 0 ?
@@ -25,6 +30,7 @@ const MainInfo = (props) => {
                     : <div className="red">{stock.changes}</div>
                     }
                 </div>
+
                 <div className="change-item">
                     <div>CHANGE PERCENTAGE:</div>
                     {stock.changes > 0 ?
@@ -32,7 +38,9 @@ const MainInfo = (props) => {
                     : <div className="red">{stock.changesPercentage}</div>
                     }
                 </div>
+
             </div>
+
         </div>
     )   
 }

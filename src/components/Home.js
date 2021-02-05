@@ -2,14 +2,12 @@ import React from 'react'
 import {SearchForm} from './'
 
 const Home = () => {
-
+    
     return (
         <div>
-        <SearchForm />
+            <SearchForm />
         </div>
     )
 }
-
-
 
 export default Home
