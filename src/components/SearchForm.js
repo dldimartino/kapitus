@@ -6,7 +6,7 @@ const SearchForm = (props) => {
     const [stock, setStock] = useState({})
     const [searchBar, setSearchBar] = useState("")
 
-    const getData = async (symbol="AAPL") => {
+    const getrata = async (symbol="AAPL") => {
         const info = await axios.get(`https://financialmodelingprep.com/api/v3/company/profile/${symbol}?apikey=4540193e127ee8af1bfdbffae6a58da3`)
         setStock(info.data)
     }
@@ -16,7 +16,7 @@ const SearchForm = (props) => {
     }
 
     useEffect(() => {
-        getData()
+        getrata()
     }, [])
 
 
@@ -25,7 +25,7 @@ const SearchForm = (props) => {
     return (
     <div className="search-form-component">
 
-        <form name="searchForm" onSubmit={() => getData(searchBar)} id="input-section">
+        <form name="searchForm" onSubmit={() => getrata(searchBar)} id="input-section">
             <label htmlFor="searchForm"> Enter Symbol 
             <input type="text" id="searchForm" name="searchForm" onChange={searchUpdater}/>
             </label>
@@ -127,7 +127,7 @@ const SearchForm = (props) => {
                 </div>
                 <div className="line-item">
                     <div>LAST DIV:</div>
-                    <div>{stock.profile.lastDiv}</div>
+                    <div>{stock.profile.lastriv}</div>
                 </div>
                 <div className="line-item">
                     <div>MKT CAP:</div>
@@ -178,7 +178,113 @@ const SearchForm = (props) => {
                 </div>
             </div>
         </div>
-        : <div>Symbol Not Found</div>}
+        : 
+        // <div>Symbol Not Found</div>}
+
+<div className="stock-info">
+            
+            <div className="main-info">
+                <div className="main-info-item">
+                    <div className="company-name">Apple</div>
+                </div>
+                <div className="main-info-item">
+                    <div className="symbol">AAPL</div>
+                </div>
+                <div className="main-info-item">
+                    <div>PRICE:</div>
+                    {0 ? <div>0</div> : <div>Price Unavailable</div>}
+                </div>
+                <div className="change-section">
+                    <div className="change-item">
+                        <div>CHANGE:</div>
+                        {0 > 0 ?
+                        <div className="green">0</div>
+                        : <div className="red">0</div>
+                        }
+                    </div>
+                    <div className="change-item">
+                        <div>CHANGE PERCENTAGE:</div>
+                        {0 > 0 ?
+                        <div className="green">0</div>
+                        : <div className="red">0</div>
+                        }
+                    </div>
+                </div>
+            </div>
+
+            <div className="sub-info">
+                <table id="left-bar">
+                    <td className="column-1">
+                        <tr>CUSIP:</tr>
+                        <tr>BETA:</tr>
+                        <tr>ADDRESS:</tr>
+                        <tr>CITY:</tr>
+                        <tr>COUNTRY:</tr>
+                        <tr>CURRENCY:</tr>
+                        <tr>CEO:</tr>
+                        <tr>CIK:</tr>
+                        <tr>EXCHANGE:</tr>
+                        <tr>EXCHANGE SHORT NAME:</tr>
+                        <tr>FULL TIME EMPLOYEES:</tr>
+                        <tr>IMAGE:</tr>
+                        <tr>INDUSTRY:</tr>
+                        <tr>IPO DATE:</tr>
+                        <tr>ISIN:</tr>
+                        <tr>LAST DIV:</tr>
+                        <tr>MKT CAP:</tr>
+                        <tr>PHONE:</tr>
+                        <tr>PRICE:</tr>
+                        <tr>RANGE:</tr>
+                        <tr>SECTOR:</tr>
+                        <tr>STATE:</tr>
+                        <tr>VOL AVG:</tr>
+                        <tr>WEBSITE:</tr>
+                        <tr>ZIP:</tr>
+                    </td>
+                    <td className="column-2">
+                        <tr>0</tr>
+                        <tr>0</tr>
+                        <tr>0</tr>
+                        <tr>0</tr>
+                        <tr>0</tr>
+                        <tr>0</tr>
+                        <tr>0</tr>
+                        <tr>0</tr>
+                        <tr>0</tr>
+                        <tr>0</tr>
+                        <tr>0</tr>
+                        <tr>0</tr>
+                        <tr>0</tr>
+                        <tr>0</tr>
+                        <tr>0</tr>
+                        <tr>0</tr>
+                        <tr>0</tr>
+                        <tr>0</tr>
+                        <tr>0</tr>
+                        <tr>0</tr>
+                        <tr>0</tr>
+                        <tr>0</tr>
+                        <tr>0</tr>
+                        <tr>No Website Listed</tr>
+                        <tr>0</tr>
+                    </td>
+                </table>
+
+            <div className="right-bar">
+                <div className="line-item">
+                    <div>DEFAULT IMAGE:</div>
+                    <div>0</div>
+                </div>
+                <div className="line-item" id="description">
+                    <div>DESCRIPTION:</div>
+                    <div>0</div>
+                </div>
+            </div>
+            </div>
+            </div>}
+
+
+
     </div>
     )
 }
