@@ -5,9 +5,6 @@ const Home = () => {
 
     return (
         <div>
-        <div>this is the Home Component</div>
-        <br/>
-        <br/>
         <SearchForm />
         </div>
     )
