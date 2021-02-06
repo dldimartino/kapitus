@@ -8,13 +8,13 @@ const SideBar = (props) => {
     return (
 
         <div className="sidebar-component">
-
+                {stock.defaultImage ? 
                 <div className="line-item">
                     <div>{stock.defaultImage}</div>
-                </div>
+                </div> : null }
 
-                <div className="line-item">
-                        <img src={stock.image} alt="Company Logo"/>
+                <div className="line-item"  id="logo-container">
+                        <img src={stock.image} alt="Company Logo" id="company-logo"/>
                     </div>
 
                 <div className="line-item">
