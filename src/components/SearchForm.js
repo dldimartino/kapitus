@@ -8,12 +8,8 @@ const SearchForm = () => {
     const [searchBar, setSearchBar] = useState("AAPL")
 
     const handleSubmit = async (event = null) => {
-        console.log("SEARCHBAR ON SUBMIT>>>", searchBar)
-        console.log("SYPEOF SEARCHBAR", typeof(searchBar))
-        console.log("event ON SUBMIT>>>", event)
         let info
         if (event !== null) {event.preventDefault()}
-        console.log("INSIDE IF STATEMENT EVENT NULL")
             info = await axios.get(`https://financialmodelingprep.com/api/v3/company/profile/${searchBar}?apikey=4540193e127ee8af1bfdbffae6a58da3`)
         //second api code below just to add uses
             if (!info.data.profile) {
@@ -23,14 +19,11 @@ const SearchForm = () => {
             info = await axios.get(`https://financialmodelingprep.com/api/v3/company/profile/AAPL?apikey=demo`)
             info.data.symbol = "Daily free API request limit reached: showing Default/Test symbol: AAPL"
         }
-        console.log("INFOOOOOOO>>>>>>>>>>", info)
         setStock(info.data)
     }
 
     const handleChange = (event) => {
-        console.log("SEARCHBAR BEFORE CHANGE>>>>", searchBar)
         setSearchBar(event.target.value)
-        console.log("SEARCHBAR AFTER CHANGE>>>>", searchBar)
     }
 
     useEffect(() => {
