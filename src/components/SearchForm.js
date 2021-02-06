@@ -5,7 +5,7 @@ import {MainInfo, JustList, SideBar, SubInfo} from './'
 
 const SearchForm = () => {
     const [stock, setStock] = useState({})
-    const [searchBar, setSearchBar] = useState("")
+    const [searchBar, setSearchBar] = useState("AAPL")
 
     const handleSubmit = async (event = null) => {
         console.log("SEARCHBAR ON SUBMIT>>>", searchBar)
@@ -18,7 +18,6 @@ const SearchForm = () => {
         //second api code below just to add uses
             if (!info.data.profile) {
             info = await axios.get(`https://financialmodelingprep.com/api/v3/company/profile/${searchBar}?apikey=04ee7b390f7b9b255a99384eed8f3d32`)
-            info.data.symbol = "Daily free API request limit reached: showing Default/Test symbol: AAPL"
         }
             if (!info.data.profile) {
             info = await axios.get(`https://financialmodelingprep.com/api/v3/company/profile/AAPL?apikey=demo`)

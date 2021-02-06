@@ -1,4 +1,4 @@
-This is the Kapitus coding challenge.
+This is the Stock-Checker coding challenge.
 
 This project was created using the create-react-app starting point (my first time trying this functionality)
 I found that it was a quick and easy starting point for a react application. I've also read that Next.js is a good starting point
