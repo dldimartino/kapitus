@@ -36,7 +36,6 @@ const SearchForm = () => {
         <form name="searchForm" onSubmit={handleSubmit} id="input-section">
             <label htmlFor="searchForm"> Enter Symbol  </label>
             <input type="text" id="searchForm" name="searchForm" onChange={handleChange}/>
-           
             <button type="submit" name="searchForm"> Submit </button>
         </form>
 

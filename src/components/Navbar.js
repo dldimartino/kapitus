@@ -10,7 +10,9 @@ const Navbar = () => {
             <div className='nav-menu'>
                 <h5 className="nav-item">Home</h5>
                 <h5 className="nav-item">Search</h5>
-                <h5 className="nav-item">About</h5>
+                <a href="https://github.com/dldimartino/stock-checker" className="nav-item">
+                <h5>GitHub</h5>
+                </a>
                 <h5 className="nav-item">Contact Us</h5>
             </div>
 

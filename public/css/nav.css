@@ -2,13 +2,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 20px;
-    background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(0, 0, 255));
+    padding: 0px 40px 0px 40px;
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(0, 23, 113));
     margin-bottom: 50px;
 }
 
 .kapitus-logo {
-    width: 300px;
+    min-width: 300px;
     font-size: 2em;
 }
 
@@ -16,11 +16,12 @@
     display: flex;
     justify-content: flex-end;
     width: 100%;
-    color: white
 }
 
 .nav-item {
-    margin: 0px 20px 0px 20px;
+    margin: 0px 0px 0px 40px;
+    color: white;
+    text-decoration: none;
 }
 
 .nav-item:hover {
