@@ -11,15 +11,11 @@
 }
 
 #input-section button {
-    margin: 20px;
+    margin: 10px;
 }
 
 #input-section label {
-    margin: 20px;
-}
-
-#input-section label {
-    margin: 20px;
+    margin: 20px 0px 0px 0px;
 }
 
 .green {

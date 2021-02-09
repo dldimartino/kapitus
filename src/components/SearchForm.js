@@ -34,9 +34,9 @@ const SearchForm = () => {
     <div className="search-form-component">
 
         <form name="searchForm" onSubmit={handleSubmit} id="input-section">
-            <label htmlFor="searchForm"> Enter Symbol 
+            <label htmlFor="searchForm"> Enter Symbol  </label>
             <input type="text" id="searchForm" name="searchForm" onChange={handleChange}/>
-            </label>
+           
             <button type="submit" name="searchForm"> Submit </button>
         </form>
 
@@ -50,7 +50,7 @@ const SearchForm = () => {
                 <SubInfo stockInfo={stock} />
             </div>
 
-            <JustList stockInfo={stock}/>
+            {/* <JustList stockInfo={stock}/> */}
 
         </div>
         : <div>Symbol Not Found</div>}
