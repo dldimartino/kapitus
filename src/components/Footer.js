@@ -4,7 +4,6 @@ const Footer = () => {
     
         return (
             <div className="footer">
-                <a href="https://financialmodelingprep.com/developer/docs/" className="footer-item"> “Data provided by Financial Modeling Prep” </a>
                 <div className="footer-info">
                 <div  className="footer-item">2021</div>
                 <div className="footer-item">|</div>
@@ -12,6 +11,7 @@ const Footer = () => {
                     <div className="footer-item">|</div>
                     <a href="https://financialmodelingprep.com/developer/docs/"  className="footer-item"> Linkedin</a>
                 </div>
+                <a href="https://financialmodelingprep.com/developer/docs/" className="footer-item"> “Data provided by Financial Modeling Prep” </a>
             </div>
         )
 }

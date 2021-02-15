@@ -17,9 +17,9 @@ const SideBar = (props) => {
                         <img src={stock.image} alt="Company Logo" id="company-logo"/>
                     </div>
 
+                        <div>DESCRIPTION:</div>
                 <div className="line-item">
                     <div className="description">
-                        <div>DESCRIPTION:</div>
                         <div>{stock.description}</div>
                     </div>
                 </div>

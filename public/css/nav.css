@@ -7,7 +7,8 @@
     margin-bottom: 50px;
 }
 
-.kapitus-logo {
+.stock-checker-logo {
+    white-space: nowrap;
     min-width: 300px;
     font-size: 2em;
 }
