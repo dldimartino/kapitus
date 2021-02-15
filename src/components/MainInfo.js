@@ -18,7 +18,7 @@ const MainInfo = (props) => {
 
             <div className="main-info-item">
                 <div>PRICE:</div>
-                {<div>{`$${stock.price}`}</div> || <div>Price Unavailable</div>}
+                {<div>{`\u00A0 $${stock.price}`}</div> || <div>Price Unavailable</div>}
             </div>
 
             <div className="change-section">
